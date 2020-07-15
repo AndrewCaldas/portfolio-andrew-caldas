@@ -1,0 +1,29 @@
+.header-main {
+  display: block !important;
+  margin: 0 !important;
+  background-color: #3B3B98;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100px;
+}
+
+.header-main .navbar {
+  width: 85vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-main .title {
+  padding:0 15px;
+}
+
+.header-main .links {
+  width: 25vw;
+  display: flex;
+  justify-content: space-around;
+}

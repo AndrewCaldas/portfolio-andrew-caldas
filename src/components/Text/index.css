@@ -1,0 +1,16 @@
+.main-text {
+  font-size: 16px;
+  color: #000000;
+}
+
+.main-text.big {
+  font-size: 28px !important;
+}
+
+.main-text.medium { 
+  font-size: 20px !important;
+}
+
+.main-text.small {
+  font-size: 16px !important;
+}
