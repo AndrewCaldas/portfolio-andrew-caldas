@@ -10,22 +10,19 @@ let NavLinks = [
   {
     id: 1,
     name: i18n.t("header.links.portfolio"),
-    href: "#"
+    href: "/portfolio"
   },
-  { id: 2, name: i18n.t("header.links.about"), href: "#" },
-  { id: 3, name: i18n.t("header.links.contact"), href: "#" }
+  { id: 2, name: i18n.t("header.links.about"), href: "/sobre" },
+  { id: 3, name: i18n.t("header.links.contact"), href: "/contato" }
 ];
 
-const Header = ({ title, backgroundColor, textColor }) => {
-  let word_first = title ? title.split(" ")[0] : "";
-  let word_second = title ? title.split(" ")[1] : "";
+const Header = ({ title }) => {
+  let word_first = title ? title.split(" ")[0] : "Andrew";
+  let word_second = title ? title.split(" ")[1] : "Caldas";
 
   return (
     <div className="header-main">
-      <div
-        className="header-container"
-        style={{ backgroundColor: backgroundColor }}
-      >
+      <div className="header-container" style={{ backgroundColor: "#6747c7" }}>
         <Navbar>
           <Col>
             <NavbarBrand href="#" className="title">
@@ -33,12 +30,14 @@ const Header = ({ title, backgroundColor, textColor }) => {
                 <TextBold
                   text={"< " + word_first}
                   size={"medium"}
-                  color={textColor}
+                  color={"#f4f6ff"}
+                  upperCase={false}
                 />
                 <TextLight
                   text={word_second + " />"}
                   size={"medium"}
-                  color={textColor}
+                  color={"#f4f6ff"}
+                  upperCase={false}
                 />
               </span>
             </NavbarBrand>
@@ -48,14 +47,14 @@ const Header = ({ title, backgroundColor, textColor }) => {
               <Nav className="links">
                 {NavLinks.map((items, index) => (
                   <NavLink key={index} id={items.id} href={items.href}>
-                    <Text text={items.name} color={textColor} />
+                    <Text text={items.name} color={"#f4f6ff"} />
                   </NavLink>
                 ))}
               </Nav>
             )}
           </Col>
           <Col>
-            <Text text={"PT/EN"} color={textColor} />
+            <Text text={"PT/EN"} color={"#f4f6ff"} />
           </Col>
         </Navbar>
       </div>

@@ -3,7 +3,7 @@ import TextBold from "../../components/Text/TextBold";
 import TextLight from "../../components/Text/TextLight";
 import "./index.css";
 
-const pages = () => {
+const Error404 = () => {
   return (
     <div className="test">
       <div style={{ padding: "0 10px" }}>
@@ -16,4 +16,4 @@ const pages = () => {
   );
 };
 
-export default pages;
+export default Error404;

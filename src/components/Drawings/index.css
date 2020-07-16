@@ -10,7 +10,7 @@
   width: 100vw;
   height: 50vh;
   border-radius: 0 0 0 40%;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .drawings .title {
@@ -31,6 +31,6 @@
   width: 100vw;
   height: 50vh;
   border-radius: 0 0 0 10%;
-  opacity: 0.6;
+  opacity: 0.8;
   z-index: -1;
 }

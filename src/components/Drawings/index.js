@@ -4,22 +4,22 @@ import TextLight from "../Text/TextLight";
 import { Row, Col } from "react-bootstrap";
 import "./index.css";
 
-const Drawings = ({ color, title, description, textColor }) => {
-  let varColor = color ? color : "";
+const Drawings = ({ title, description }) => {
+  let varColor = "#6747c7";
   return (
     <div className={"drawings-main"}>
       <div className="drawings" style={{ background: varColor }}>
         <span className="title">
           <TextBold
             text={title ? title : ""}
-            color={textColor ? textColor : "#000"}
+            color={"#f4f6ff"}
             size={"extra-big"}
           />
         </span>
         <span className="description">
           <TextLight
             text={description ? description : ""}
-            color={textColor ? textColor : "#000"}
+            color={"#f4f6ff"}
             size={"medium"}
           />
         </span>

@@ -2,18 +2,16 @@ import React from "react";
 import Header from "../../components/Header";
 import Drawings from "../../components/Drawings";
 
-const Portfolio = () => {
+const Contact = () => {
   return (
     <div>
       <Header />
       <Drawings
-        title={"Portfólio"}
-        description={
-          "Abaixo você irá encontrar todos os projetos que já realizei!"
-        }
+        title={"Contato"}
+        description={"Abaixo você poderá entrar em contato comigo!"}
       />
     </div>
   );
 };
 
-export default Portfolio;
+export default Contact;
