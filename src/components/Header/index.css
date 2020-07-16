@@ -1,11 +1,14 @@
 .header-main {
-  display: block !important;
-  margin: 0 !important;
-  background-color: #3B3B98;
+  position: static;
+  width: 100vw;
+  height: 100px;
 }
 
 .header-container {
   display: flex;
+  opacity: 0.8;
+  position: fixed;
+  z-index: 2;
   align-items: center;
   justify-content: center;
   width: 100vw;
@@ -18,8 +21,20 @@
   justify-content: space-between;
 }
 
+.header-main .navbar .col:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-main .navbar .col:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .header-main .title {
-  padding:0 15px;
+  padding: 0 15px;
 }
 
 .header-main .links {

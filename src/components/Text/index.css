@@ -1,16 +1,36 @@
 .main-text {
   font-size: 16px;
-  color: #000000;
+  padding: 0 2px;
+  /* color: #000000; */
+}
+
+.main-text.extra-big {
+  font-size: 48px !important;
 }
 
 .main-text.big {
-  font-size: 28px !important;
+  font-size: 36px !important;
 }
 
-.main-text.medium { 
-  font-size: 20px !important;
+.main-text.medium {
+  font-size: 28px !important;
 }
 
 .main-text.small {
   font-size: 16px !important;
+}
+
+/* Text bold */
+
+.text-bold .main-text {
+  font-weight: bold;
+  opacity: 1;
+}
+
+/* Text Light  */
+
+.text-light .main-text {
+  font-weight: 100;
+  line-height: 3.3rem;
+  opacity: 0.8;
 }
