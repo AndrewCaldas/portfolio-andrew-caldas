@@ -7,12 +7,12 @@ const Portfolio = () => {
   return (
     <div>
       <Header />
-      {/* <Drawings
+      <Drawings
         title={"Portfólio"}
         description={
           "Abaixo você irá encontrar todos os projetos que já realizei!"
         }
-      /> */}
+      />
       <Cards />
     </div>
   );

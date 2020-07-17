@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col, Nav, Navbar, NavbarBrand, NavLink } from "react-bootstrap";
+import { Col, Nav, Navbar, NavbarBrand, NavLink } from "react-bootstrap";
 import Text from "../Text";
 import TextBold from "../Text/TextBold";
 import TextLight from "../Text/TextLight";
