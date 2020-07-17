@@ -1,0 +1,15 @@
+.cards-main {
+  width: 100vw;
+  margin: 5rem 0;
+}
+
+.cards-main .container {
+  position: static;
+  height: 35vw;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0.625rem;
+  border: 0 solid rgba(0, 0, 0, 0.125);
+  display: flex;
+  flex-direction: row;
+}
