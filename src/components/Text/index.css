@@ -31,7 +31,7 @@
 
 .text-light .main-text {
   font-weight: 100;
-  line-height: 3.3rem;
+  /* line-height: 3.3rem; */
   opacity: 0.8;
 }
 

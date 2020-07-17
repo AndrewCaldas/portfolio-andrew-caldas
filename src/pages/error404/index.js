@@ -3,7 +3,7 @@ import TextBold from "../../components/Text/TextBold";
 import TextLight from "../../components/Text/TextLight";
 import "./index.css";
 
-const Error404 = () => {
+const error404 = () => {
   return (
     <div className="test">
       <div style={{ padding: "0 10px" }}>
@@ -16,4 +16,4 @@ const Error404 = () => {
   );
 };
 
-export default Error404;
+export default error404;
