@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Portfolio from "../pages/Portfolio";
 import About from "../pages/About";
 import Contact from "../pages/Contact";
-import Error404 from "../pages/Error404";
+// import Error404 from "../pages/Error404";
 
 const Router = () => (
   <BrowserRouter>
@@ -14,7 +14,7 @@ const Router = () => (
       <Route exact path="/contato" component={Contact} />
 
       {/* page 404 */}
-      <Route exact path="*" component={Error404} />
+      {/* <Route exact path="*" component={Error404} /> */}
     </Switch>
   </BrowserRouter>
 );
