@@ -9,7 +9,46 @@
   background-color: #fff;
   position: relative;
   border-radius: 0.625rem;
+  -webkit-box-shadow: 0px 0px 44px -29px rgba(82, 82, 82, 1);
+  -moz-box-shadow: 0px 0px 44px -29px rgba(82, 82, 82, 1);
+  box-shadow: 0px 0px 44px -29px rgba(82, 82, 82, 1);
   border: 0 solid rgba(0, 0, 0, 0.125);
   display: flex;
   flex-direction: row;
+  padding: 0;
+}
+
+.cards-main .container:hover {
+  -webkit-box-shadow: 0px 0px 34px -29px rgba(82, 82, 82, 1);
+  -moz-box-shadow: 0px 0px 34px -29px rgba(82, 82, 82, 1);
+  box-shadow: 0px 0px 34px -29px rgba(82, 82, 82, 1);
+  cursor: pointer;
+}
+
+.cards-main .container .left-side {
+  width: 90%;
+  /* border: 1px solid black; */
+}
+
+.cards-main .container .left-side .post {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.cards-main .container .left-side .post .main-text {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cards-main .container .rigth-side {
+  width: 110%;
+  border: 1px solid black;
 }

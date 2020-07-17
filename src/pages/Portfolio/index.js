@@ -14,6 +14,11 @@ const Portfolio = () => {
         }
       />
       <Cards />
+      <Cards />
+      <Drawings
+        title={"Sobre"}
+        description={"Abaixo você irá saber tudo sobre mim!"}
+      />
     </div>
   );
 };
