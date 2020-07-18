@@ -50,5 +50,9 @@
 
 .cards-main .container .rigth-side {
   width: 110%;
-  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(207, 207, 207);
+  /* border: 1px solid black; */
 }

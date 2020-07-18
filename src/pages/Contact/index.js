@@ -1,15 +1,17 @@
 import React from "react";
 import Header from "../../components/Header";
-import Drawings from "../../components/Drawings";
+import SlickSlider from "../../components/SlickSlider";
+// import Drawings from "../../components/Drawings";
 
 const Contact = () => {
   return (
     <div>
       <Header />
-      <Drawings
+      {/* <Drawings
         title={"Contato"}
         description={"Abaixo você poderá entrar em contato comigo!"}
-      />
+      /> */}
+      <SlickSlider />
     </div>
   );
 };

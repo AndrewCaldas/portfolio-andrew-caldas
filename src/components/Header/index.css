@@ -16,7 +16,7 @@
 }
 
 .header-main .navbar {
-  width: 85vw;
+  width: 83.4vw;
   display: flex;
   justify-content: space-between;
 }
@@ -34,7 +34,7 @@
 }
 
 .header-main .title {
-  padding: 0 15px;
+  /* padding: 0 15px; */
 }
 
 .header-main .links {

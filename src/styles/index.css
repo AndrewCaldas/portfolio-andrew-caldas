@@ -10,3 +10,10 @@ body {
   background-color: #f7f7f8;
   color: #000000;
 }
+
+@font-face {
+  font-family: "WorkSans-Light";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../assets/fonts/work-sans-light.ttf"); /* IE9 Compat Modes */
+}
