@@ -1,14 +1,18 @@
 import React from "react";
 import TextBold from "../Text/TextBold";
 import TextLight from "../Text/TextLight";
-import { Row, Col } from "react-bootstrap";
+import { Col } from "react-bootstrap";
 import "./index.css";
 
-const Drawings = ({ title, description }) => {
+const Drawings = ({ title, description, twoSides }) => {
   let varColor = "#6747c7";
   return (
     <div className={"drawings-main"}>
-      <div className="drawings" style={{ background: varColor }}>
+      <span className="bord" style={{ background: varColor }}></span>
+      <Col
+        className={`drawings ${twoSides ? "drawings-left" : ""}`}
+        style={{ background: varColor }}
+      >
         <span className="title">
           <TextBold
             text={title ? title : ""}
@@ -23,8 +27,17 @@ const Drawings = ({ title, description }) => {
             size={"medium"}
           />
         </span>
-      </div>
-      <div className="mini-drawings" style={{ background: varColor }}></div>
+      </Col>
+      {twoSides && (
+        <Col className={`drawings-right`} style={{ background: varColor }}>
+          <span className="box"></span>
+          {/* <span className=""> */}
+          <TextBold text={"Thinking"} color={"#f4f6ff"} size={"extra-big"} />
+          <TextBold text={"Outside"} color={"#f4f6ff"} size={"extra-big"} />
+          <TextLight text={"The Box!"} color={"#f4f6ff"} size={"extra-big"} />
+          {/* </span> */}
+        </Col>
+      )}
     </div>
   );
 };

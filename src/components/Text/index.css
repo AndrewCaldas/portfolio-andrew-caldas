@@ -20,6 +20,10 @@
   font-size: 18px !important;
 }
 
+.main-text.extra-small {
+  font-size: 14px !important;
+}
+
 /* Text bold */
 
 .text-bold .main-text {
@@ -33,6 +37,12 @@
   font-weight: 100;
   /* line-height: 3.3rem; */
   opacity: 0.8;
+  font-family: "WorkSans-Light";
+}
+
+.text-normal .main-text {
+  opacity: 1;
+  font-weight: normal;
 }
 
 .text-uppercase {
