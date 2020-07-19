@@ -31,9 +31,17 @@ const handleScroll = (setScrolling, scrolling) => {
   }
 };
 
-const Header = ({ title }) => {
+const Header = ({ title, state }) => {
   let word_first = title ? title.split(" ")[0] : "Andrew";
   let word_second = title ? title.split(" ")[1] : "Caldas";
+
+  let status = state ? state : "white";
+
+  let colortext = status === "dark" ? "#1b262c" : "#f4f6ff";
+
+  let backgroundCol = "transparent";
+  // rgba(103, 71, 199, 0.85)
+  // "#6747c7"
 
   let [scrolling, setScrolling] = useState(false);
 
@@ -51,7 +59,10 @@ const Header = ({ title }) => {
 
   return (
     <div className="header-main">
-      <div className="header-container" style={{ backgroundColor: "#6747c7" }}>
+      <div
+        className="header-container"
+        style={{ backgroundColor: backgroundCol }}
+      >
         <Navbar>
           <Col>
             <NavbarBrand href="#" className="title">
@@ -59,13 +70,13 @@ const Header = ({ title }) => {
                 <TextBold
                   text={"< " + word_first}
                   size={"medium"}
-                  color={"#f4f6ff"}
+                  color={colortext}
                   upperCase={false}
                 />
                 <TextLight
                   text={word_second + " />"}
                   size={"medium"}
-                  color={"#f4f6ff"}
+                  color={colortext}
                   upperCase={false}
                 />
               </span>
@@ -76,14 +87,14 @@ const Header = ({ title }) => {
               <Nav className="links">
                 {NavLinks.map((items, index) => (
                   <NavLink key={index} id={items.id} href={items.href}>
-                    <Text text={items.name} color={"#f4f6ff"} />
+                    <Text text={items.name} color={colortext} />
                   </NavLink>
                 ))}
               </Nav>
             )}
           </Col>
           <Col>
-            <Text text={"PT/EN"} color={"#f4f6ff"} />
+            <Text text={"PT/EN"} color={colortext} />
           </Col>
         </Navbar>
       </div>

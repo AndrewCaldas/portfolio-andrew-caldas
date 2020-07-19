@@ -63,7 +63,7 @@ const Cards = ({ objectId, rowIndex, title, description, date, img }) => {
           className="rigth-side"
           style={detectAddOrEven(rowIndex) == 0 ? { order: 2 } : { order: 1 }}
         >
-          <img src={typeImage(img, height, width)} width="617" height="504" />
+          <img src={typeImage(img, height, width)} width="auto" height="auto" />
         </div>
       </Container>
     </div>

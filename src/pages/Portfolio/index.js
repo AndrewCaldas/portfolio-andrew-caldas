@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Drawings from "../../components/Drawings";
 import Cards from "../../components/Cards";
+import SlickSlider from "../../components/SlickSlider";
 
 import Img1 from "../../assets/img/img-1.jpeg";
 import Img2 from "../../assets/img/img-2.jpeg";
@@ -12,10 +13,16 @@ const Portfolio = () => {
   return (
     <div>
       <Header />
-      <Drawings
+      {/* <Drawings
         title={"Andrew Caldas"}
         description={"Desenvolvedor Front-End"}
-        twoSides={true}
+        twoSide={false}
+      /> */}
+      <SlickSlider
+        list={listImages}
+        mask={true}
+        title={"Andrew Caldas"}
+        description={"Desenvolvedor Front-End"}
       />
       {listProjects &&
         listProjects.map((item, index) => (
@@ -63,6 +70,25 @@ let listProjects = [
     description:
       "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
     date: "23/03/2012",
+    img: Img4
+  }
+];
+
+let listImages = [
+  {
+    id: 1,
+    img: Img1
+  },
+  {
+    id: 2,
+    img: Img2
+  },
+  {
+    id: 3,
+    img: Img3
+  },
+  {
+    id: 4,
     img: Img4
   }
 ];

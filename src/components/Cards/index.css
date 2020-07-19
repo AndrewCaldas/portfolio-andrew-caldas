@@ -49,10 +49,21 @@
 }
 
 .cards-main .container .rigth-side {
+  position: relative;
+  overflow: hidden;
   width: 110%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(207, 207, 207);
-  /* border: 1px solid black; */
+  margin: 0;
+}
+
+.cards-main .container .rigth-side img {
+  position: absolute;
+  left: -10000%;
+  right: -10000%;
+  top: -10000%;
+  bottom: -10000%;
+  margin: auto auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
 }

@@ -4,13 +4,13 @@ import TextLight from "../Text/TextLight";
 import { Col } from "react-bootstrap";
 import "./index.css";
 
-const Drawings = ({ title, description, twoSides }) => {
+const Drawings = ({ title, description, twoSide }) => {
   let varColor = "#6747c7";
   return (
     <div className={"drawings-main"}>
       <span className="bord" style={{ background: varColor }}></span>
       <Col
-        className={`drawings ${twoSides ? "drawings-left" : ""}`}
+        className={`drawings ${twoSide ? "drawings-left" : ""}`}
         style={{ background: varColor }}
       >
         <span className="title">
@@ -28,14 +28,9 @@ const Drawings = ({ title, description, twoSides }) => {
           />
         </span>
       </Col>
-      {twoSides && (
+      {twoSide && (
         <Col className={`drawings-right`} style={{ background: varColor }}>
-          <span className="box"></span>
-          {/* <span className=""> */}
-          <TextBold text={"Thinking"} color={"#f4f6ff"} size={"extra-big"} />
-          <TextBold text={"Outside"} color={"#f4f6ff"} size={"extra-big"} />
-          <TextLight text={"The Box!"} color={"#f4f6ff"} size={"extra-big"} />
-          {/* </span> */}
+          <TextBold text={twoSide} color={"#f4f6ff"} size={"extra-big"} />
         </Col>
       )}
     </div>
