@@ -5,5 +5,10 @@
       "portfolio": "Portfólio",
       "contact": "Contato"
     }
+  },
+  "portfolio": {
+    "title": "portfólio",
+    "text": "Bem-vindo ao <b> meu portfólio</b>, aqui você encontrará todos os projetos pessoais que já realizei até hoje! :)",
+    "text_legal": "Projetos realizados para terceiros, manterei conficialidade a menos que o cliente permina que eu compartilhe."
   }
 }

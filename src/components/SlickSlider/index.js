@@ -28,15 +28,11 @@ const SlickSlider = ({ title, description, list, state, mask }) => {
     <div>
       <span style={{ backgroundColor: haveMask }} className="mask-slick">
         <span className="text-main">
-          <TextBold
-            text={title ? title : ""}
-            color={colortext}
-            size={"extra-big"}
-          />
+          <TextBold text={title ? title : ""} color={colortext} size={"big"} />
           <TextLight
             text={description ? description : ""}
             color={colortext}
-            size={"big"}
+            size={"medium"}
           />
         </span>
       </span>

@@ -17,9 +17,9 @@ const typeImage = (img, height, width) => {
 };
 
 const detectAddOrEven = num => {
-  var n = num;
-  if (n % 2 == 0) return 0;
-  if (n % 2 == 1) return 1;
+  var n = num ? num : 0;
+  if (n % 2 === 0) return 0;
+  if (n % 2 === 1) return 1;
 };
 
 const Cards = ({ objectId, rowIndex, title, description, date, img }) => {
@@ -37,11 +37,11 @@ const Cards = ({ objectId, rowIndex, title, description, date, img }) => {
   }, []);
 
   return (
-    <div id={objectId ? objectId : null} className="cards-main">
+    <div id={objectId ? "card-" + objectId : null} className="cards-main">
       <Container>
         <div
           className="left-side"
-          style={detectAddOrEven(rowIndex) == 0 ? { order: 1 } : { order: 2 }}
+          style={detectAddOrEven(rowIndex) === 0 ? { order: 1 } : { order: 2 }}
         >
           <span className="post">
             <TextLight
@@ -61,7 +61,7 @@ const Cards = ({ objectId, rowIndex, title, description, date, img }) => {
         <div
           id="place-holder"
           className="rigth-side"
-          style={detectAddOrEven(rowIndex) == 0 ? { order: 2 } : { order: 1 }}
+          style={detectAddOrEven(rowIndex) === 0 ? { order: 2 } : { order: 1 }}
         >
           <img src={typeImage(img, height, width)} width="auto" height="auto" />
         </div>

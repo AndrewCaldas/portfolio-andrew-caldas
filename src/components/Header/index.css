@@ -4,6 +4,18 @@
   height: 100px; */
 }
 
+.header-main .default-class {
+  background: transparent;
+  transition-duration: 200ms;
+  transition-property: background;
+}
+
+.header-main .scrolling-class {
+  background: rgba(103, 71, 199, 0.85);
+  transition-duration: 500ms;
+  transition-property: background;
+}
+
 .header-container {
   display: flex;
   opacity: 1;

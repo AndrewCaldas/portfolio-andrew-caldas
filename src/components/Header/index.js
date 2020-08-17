@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Nav, Navbar, NavbarBrand, NavLink } from "react-bootstrap";
 import Text from "../Text";
 import TextBold from "../Text/TextBold";
@@ -6,28 +6,46 @@ import TextLight from "../Text/TextLight";
 import i18n from "../../locales";
 import "./index.css";
 
+let auxPositionElement = null;
+
 let NavLinks = [
   {
     id: 1,
     name: i18n.t("header.links.portfolio"),
-    href: "/portfolio"
+    href: "",
+    component: "session-portfolio"
   },
-  { id: 2, name: i18n.t("header.links.about"), href: "/sobre" },
-  { id: 3, name: i18n.t("header.links.contact"), href: "/contato" }
+  {
+    id: 2,
+    name: i18n.t("header.links.about"),
+    href: "",
+    component: "session-about"
+  },
+  { id: 3, name: i18n.t("header.links.contact"), href: "/contact" }
 ];
 
-// const getScrollPosition = () => {
-//   var doc = document.documentElement;
-//   var left = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0);
-//   var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-//   debugger;
-// };
+const detectScrolling = (setClassScrolling, param) => {
+  window.onscroll = function() {
+    if (window.pageYOffset > param) {
+      setClassScrolling("scrolling-class");
+    } else {
+      setClassScrolling("default-class");
+    }
+  };
+};
 
-const handleScroll = (setScrolling, scrolling) => {
-  if (window.scrollY === 0 && scrolling === true) {
-    setScrolling(false);
-  } else if (window.scrollY !== 0 && scrolling !== true) {
-    setScrolling(true);
+const autoScrolling = component => {
+  if (!component) return;
+  let e = document.getElementById(component);
+  if (e !== null) {
+    let getYPosition = e.getBoundingClientRect().top - 100;
+    // let teste = e.ScrollTop;
+    // debugger;
+    if (getYPosition > 0) {
+      document.documentElement.scrollTo(0, getYPosition);
+    } else {
+      document.location.href = "#" + component;
+    }
   }
 };
 
@@ -36,36 +54,21 @@ const Header = ({ title, state }) => {
   let word_second = title ? title.split(" ")[1] : "Caldas";
 
   let status = state ? state : "white";
-
   let colortext = status === "dark" ? "#1b262c" : "#f4f6ff";
 
-  let backgroundCol = "transparent";
-  // rgba(103, 71, 199, 0.85)
-  // "#6747c7"
-
-  let [scrolling, setScrolling] = useState(false);
+  let [classScrolling, setClassScrolling] = useState("");
 
   useEffect(() => {
-    // window.onscroll(getScrollPosition());
-    window.addEventListener("scroll", handleScroll(setScrolling, scrolling));
+    // detectScrolling(setScrolling, 425);
+    detectScrolling(setClassScrolling, 1);
   }, []);
-
-  useLayoutEffect(() => {
-    // your pre layout code (or 'effect') here.
-    window.removeEventListener("scroll", handleScroll(setScrolling, scrolling));
-  }, []);
-
-  console.log("scrolling: ", scrolling);
 
   return (
     <div className="header-main">
-      <div
-        className="header-container"
-        style={{ backgroundColor: backgroundCol }}
-      >
+      <div className={`header-container ${classScrolling}`}>
         <Navbar>
           <Col>
-            <NavbarBrand href="#" className="title">
+            <NavbarBrand href="/" className="title">
               <span>
                 <TextBold
                   text={"< " + word_first}
@@ -86,7 +89,12 @@ const Header = ({ title, state }) => {
             {NavLinks && (
               <Nav className="links">
                 {NavLinks.map((items, index) => (
-                  <NavLink key={index} id={items.id} href={items.href}>
+                  <NavLink
+                    key={index}
+                    id={"nav-" + items.id}
+                    href={items.href}
+                    onClick={() => autoScrolling(items.component)}
+                  >
                     <Text text={items.name} color={colortext} />
                   </NavLink>
                 ))}

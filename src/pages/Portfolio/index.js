@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Drawings from "../../components/Drawings";
 import Cards from "../../components/Cards";
 import SlickSlider from "../../components/SlickSlider";
+import i18n from "../../locales";
 
 import Img1 from "../../assets/img/img-1.jpeg";
 import Img2 from "../../assets/img/img-2.jpeg";
@@ -13,28 +14,42 @@ const Portfolio = () => {
   return (
     <div>
       <Header />
-      {/* <Drawings
-        title={"Andrew Caldas"}
-        description={"Desenvolvedor Front-End"}
-        twoSide={false}
-      /> */}
       <SlickSlider
         list={listImages}
         mask={true}
         title={"Andrew Caldas"}
         description={"Desenvolvedor Front-End"}
       />
-      {listProjects &&
-        listProjects.map((item, index) => (
-          <Cards
-            rowIndex={index}
-            objectId={item.id}
-            title={item.title}
-            description={item.description}
-            date={item.date}
-            img={item.img}
-          />
-        ))}
+
+      <div id="session-portfolio">
+        <Drawings
+          text={i18n.t("portfolio.text")}
+          background={false}
+          // textLegal={i18n.t("portfolio.text_legal")}
+        />
+
+        {listProjects &&
+          listProjects.map((item, index) => (
+            <span key={index}>
+              <Cards
+                rowIndex={index}
+                objectId={item.id}
+                title={item.title}
+                description={item.description}
+                date={item.date}
+                img={item.img}
+              />
+            </span>
+          ))}
+      </div>
+
+      <div id="session-about">
+        <Drawings
+          title="Sobre mim"
+          description="eu sou eu.."
+          background={true}
+        />
+      </div>
     </div>
   );
 };

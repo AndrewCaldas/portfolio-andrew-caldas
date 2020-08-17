@@ -80,3 +80,10 @@
 }
 
 /* side right  */
+
+/* drawings text  */
+
+.drawings-main .text {
+  text-align: center;
+  width: 60vw;
+}
