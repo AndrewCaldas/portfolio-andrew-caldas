@@ -5,6 +5,7 @@ import Cards from "../../components/Cards";
 import SlickSlider from "../../components/SlickSlider";
 import Institutional from "../../components/Institutional";
 import i18n from "../../locales";
+import imgProfile from "../../assets/img/img-profile.jpeg";
 
 import Img1 from "../../assets/img/img-1.jpeg";
 import Img2 from "../../assets/img/img-2.jpeg";
@@ -46,15 +47,32 @@ const Portfolio = () => {
 
       <div id="session-about">
         <Drawings
-          title="Sobre mim"
-          description="eu sou eu.."
-          background={true}
+          title={sectionAbout.title}
+          description={sectionAbout.description}
+          background={sectionAbout.background}
         />
 
-        <Institutional />
+        <Institutional
+          id={sectionAbout.owner.id}
+          text={sectionAbout.owner.text}
+          img={sectionAbout.owner.img}
+        />
       </div>
     </div>
   );
+};
+
+let sectionAbout = {
+  id: 1,
+  title: "Sobre Mim",
+  description: "Minha Trajetória",
+  background: true,
+  owner: {
+    id: 1,
+    text:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    img: imgProfile
+  }
 };
 
 let listProjects = [
