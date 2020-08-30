@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Drawings from "../../components/Drawings";
 import Cards from "../../components/Cards";
 import SlickSlider from "../../components/SlickSlider";
+import Institutional from "../../components/Institutional";
 import i18n from "../../locales";
 
 import Img1 from "../../assets/img/img-1.jpeg";
@@ -49,6 +50,8 @@ const Portfolio = () => {
           description="eu sou eu.."
           background={true}
         />
+
+        <Institutional />
       </div>
     </div>
   );
