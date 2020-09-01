@@ -1,0 +1,31 @@
+.timeline-main .title {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 3rem 0;
+}
+
+.timeline-main .title .main-text {
+  /* border-top: 4px solid rgba(103, 71, 199, 1); */
+  /* border-bottom: 4px solid rgba(103, 71, 199, 1); */
+  /* padding: 2rem 0; */
+}
+
+.vertical-timeline {
+  /* padding: 0em 0 !important; */
+}
+
+.vertical-timeline::before {
+  background: rgba(103, 71, 199, 1) !important;
+}
+
+.vertical-timeline-element-date .main-text {
+  background: rgba(103, 71, 199, 1);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 1170px) {
+}
