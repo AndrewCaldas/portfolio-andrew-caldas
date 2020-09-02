@@ -110,7 +110,36 @@ const PortfolioModel = () => {
           name: "teste 4",
           description: "description 1"
         }
-      ]
+      ],
+      categories: {
+        id: 1,
+        title: "Hobbies",
+        listCategories: [
+          {
+            id: 1,
+            name: "Leitura",
+            description:
+              "Leitura se tornou um hábito saudavel entre minha rotina diaria.",
+            img: Img1,
+            link: ""
+          },
+          {
+            id: 2,
+            name: "Jogos",
+            description: "Quando é para se desligar de tudo, eu amo jogar.",
+            img: Img1,
+            link: ""
+          },
+          {
+            id: 3,
+            name: "Investimentos",
+            description:
+              "Também penso no meu futuro, e acredito que bons investimentos podem moldar a minha qualidade de vida daqui para frente.",
+            img: Img1,
+            link: ""
+          }
+        ]
+      }
     }
   };
 };

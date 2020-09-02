@@ -7,6 +7,7 @@ import Institutional from "../../components/Institutional";
 // import i18n from "../../locales";
 import Timeline from "../../components/Timeline";
 import PortfolioModel from "./Model";
+import Categories from "../../components/Categories";
 
 const PageObject = PortfolioModel();
 
@@ -38,6 +39,7 @@ const Portfolio = () => {
                 description={item.description}
                 date={item.date}
                 img={item.img}
+                type={"big"}
               />
             </span>
           ))}
@@ -60,9 +62,46 @@ const Portfolio = () => {
           title={PageObject.about.title_timeline}
           timeline={PageObject.about.timeline}
         />
+
+        <Categories
+          objectId={PageObject.about.categories.id}
+          title={PageObject.about.categories.title}
+          categories={PageObject.about.categories.listCategories}
+        />
       </div>
     </div>
   );
 };
+
+// let listCategories = {
+//   id: 1,
+//   title: "Hobbies",
+//   listCategories: [
+//     {
+//       id: 1,
+//       name: "teste 1",
+//       description:
+//         "Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă",
+//       img: "",
+//       link: ""
+//     },
+//     {
+//       id: 2,
+//       name: "teste 2",
+//       description:
+//         "Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă",
+//       img: "",
+//       link: ""
+//     },
+//     {
+//       id: 3,
+//       name: "teste 3",
+//       description:
+//         "Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă",
+//       img: "",
+//       link: ""
+//     }
+//   ]
+// };
 
 export default Portfolio;

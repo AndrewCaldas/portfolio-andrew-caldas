@@ -1,9 +1,9 @@
-.cards-main {
+.big-cards-main {
   width: 100vw;
   margin: 0 0 5rem 0;
 }
 
-.cards-main .container {
+.big-cards-main .container {
   position: static;
   height: 35vw;
   background-color: #fff;
@@ -18,19 +18,19 @@
   padding: 0;
 }
 
-.cards-main .container:hover {
+.big-cards-main .container:hover {
   -webkit-box-shadow: 0px 0px 34px -29px rgba(82, 82, 82, 1);
   -moz-box-shadow: 0px 0px 34px -29px rgba(82, 82, 82, 1);
   box-shadow: 0px 0px 34px -29px rgba(82, 82, 82, 1);
   cursor: pointer;
 }
 
-.cards-main .container .left-side {
+.big-cards-main .container .left-side {
   width: 90%;
   /* border: 1px solid black; */
 }
 
-.cards-main .container .left-side .post {
+.big-cards-main .container .left-side .post {
   height: 100%;
   width: 100%;
   display: flex;
@@ -41,21 +41,21 @@
   /* align-items: center; */
 }
 
-.cards-main .container .left-side .post .main-text {
+.big-cards-main .container .left-side .post .main-text {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.cards-main .container .rigth-side {
+.big-cards-main .container .rigth-side {
   position: relative;
   overflow: hidden;
   width: 110%;
   margin: 0;
 }
 
-.cards-main .container .rigth-side img {
+.big-cards-main .container .rigth-side img {
   position: absolute;
   left: -10000%;
   right: -10000%;

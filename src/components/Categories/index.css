@@ -1,0 +1,24 @@
+.categorie-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 5rem 0;
+}
+
+.categorie-main .title {
+  height: 50px;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorie-main .list {
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin: 4rem 0; */
+}
