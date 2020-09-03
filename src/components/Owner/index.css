@@ -20,3 +20,21 @@
   min-height: 1000%;
   transform: scale(0.1);
 }
+
+@media only screen and (max-width: 1100px) {
+  .owner-main {
+    padding: 20px;
+  }
+
+  .owner-main img {
+    /* margin-top: 10px; */
+    transform: scale(0.03);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .owner-main img {
+    /* margin-top: 10px; */
+    transform: scale(0.05);
+  }
+}

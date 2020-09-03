@@ -1,8 +1,15 @@
 .drawings-main {
   display: flex;
   width: 100vw;
-  height: 50vh;
+  min-height: 50vh;
+  margin: 1rem 0;
   z-index: -1;
+}
+
+@media only screen and (max-width: 800px) {
+  .drawings-main {
+    margin: 3rem 0;
+  }
 }
 
 .drawings-main .bord {
@@ -86,5 +93,5 @@
 
 .drawings-main .text {
   text-align: center;
-  width: 60vw;
+  width: 80vw;
 }

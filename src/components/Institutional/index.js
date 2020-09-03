@@ -6,7 +6,7 @@ import "./index.css";
 
 const Institutional = ({ id, text, img }) => {
   return (
-    <Row className="institutional-main" id={"institutional-" + id}>
+    <div className="institutional-main" id={"institutional-" + id}>
       <Col className="column">
         <TextLight color="#000" size="small" text={text} />
       </Col>
@@ -14,7 +14,7 @@ const Institutional = ({ id, text, img }) => {
       <Col className="column">
         <OwnerImage src={img} />
       </Col>
-    </Row>
+    </div>
   );
 };
 

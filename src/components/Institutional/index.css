@@ -1,10 +1,22 @@
 .institutional-main {
   margin: 6rem 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 @media only screen and (min-width: 1170px) {
   .institutional-main {
     margin: 3rem 0;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .institutional-main {
+    flex-direction: column;
+  }
+
+  .institutional-main .column {
+    margin: 3rem 0 !important;
   }
 }
 

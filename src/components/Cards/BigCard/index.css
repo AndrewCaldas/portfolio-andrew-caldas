@@ -5,7 +5,7 @@
 
 .big-cards-main .container {
   position: static;
-  height: 35vw;
+  min-height: 50vh;
   background-color: #fff;
   position: relative;
   border-radius: 0.625rem;
@@ -16,6 +16,44 @@
   display: flex;
   flex-direction: row;
   padding: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  .big-cards-main .container {
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .big-cards-main .container .left-side {
+    width: 100% !important;
+  }
+
+  .big-cards-main .container .left-side .post {
+    align-items: center;
+  }
+
+  .big-cards-main .container .rigth-side {
+    display: flex;
+    justify-content: center;
+  }
+
+  .big-cards-main .container .rigth-side img {
+    order: none !important;
+    /* border-radius: 100%; */
+    position: inherit !important;
+    left: inherit !important;
+    right: inherit !important;
+    top: inherit !important;
+    bottom: inherit !important;
+    margin: auto auto !important;
+    min-width: inherit !important;
+    min-height: inherit !important;
+    -webkit-transform: inherit !important;
+    transform: inherit !important;
+    max-width: 50vw !important;
+  }
 }
 
 .big-cards-main .container:hover {

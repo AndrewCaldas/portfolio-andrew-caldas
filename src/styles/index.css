@@ -13,6 +13,7 @@ body {
   font-family: "H", "Trebuchet MS", Helvetica;
   background-color: #f7f7f8;
   color: #000000;
+  overflow-x: hidden;
 }
 
 @font-face {

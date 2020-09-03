@@ -67,7 +67,7 @@ const Header = ({ title, state }) => {
     <div className="header-main">
       <div className={`header-container ${classScrolling}`}>
         <Navbar>
-          <Col>
+          <Col className="brand">
             <NavbarBrand href="/" className="title">
               <span>
                 <TextBold
@@ -85,7 +85,7 @@ const Header = ({ title, state }) => {
               </span>
             </NavbarBrand>
           </Col>
-          <Col>
+          <Col className="header-links">
             {NavLinks && (
               <Nav className="links">
                 {NavLinks.map((items, index) => (
@@ -101,7 +101,7 @@ const Header = ({ title, state }) => {
               </Nav>
             )}
           </Col>
-          <Col>
+          <Col className="locale">
             <Text text={"PT/EN"} color={colortext} />
           </Col>
         </Navbar>

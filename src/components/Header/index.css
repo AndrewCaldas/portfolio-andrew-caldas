@@ -54,3 +54,21 @@
   display: flex;
   justify-content: space-around;
 }
+
+/* MEDIA MOBILE  */
+
+@media only screen and (max-width: 1138px) {
+  .header-main .brand {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header-main .locale {
+    display: none !important;
+  }
+
+  /* .header-main .header-links {
+    height: 100%;
+  } */
+}

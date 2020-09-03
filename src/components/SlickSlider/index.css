@@ -42,3 +42,13 @@
   -webkit-transform: scale(0.1);
   transform: scale(0.1);
 }
+
+/* MEDIA MOBILE  */
+
+@media only screen and (max-width: 1138px) {
+  .mask-slick .text-main {
+    width: 100vw;
+    text-align: center;
+    align-items: center;
+  }
+}
