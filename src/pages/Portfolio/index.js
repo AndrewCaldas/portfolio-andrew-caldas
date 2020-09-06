@@ -8,6 +8,7 @@ import Institutional from "../../components/Institutional";
 import Timeline from "../../components/Timeline";
 import PortfolioModel from "./Model";
 import Categories from "../../components/Categories";
+import Footer from "../../components/Footer";
 
 const PageObject = PortfolioModel();
 
@@ -68,6 +69,8 @@ const Portfolio = () => {
           title={PageObject.about.categories.title}
           categories={PageObject.about.categories.listCategories}
         />
+
+        <Footer listIcons={PageObject.footer} />
       </div>
     </div>
   );

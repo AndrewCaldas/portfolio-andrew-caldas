@@ -5,6 +5,9 @@ import Img2 from "../../assets/img/img-2.jpeg";
 import Img3 from "../../assets/img/img-3.jpeg";
 import Img4 from "../../assets/img/img-4.jpeg";
 import imgProfile from "../../assets/img/img-profile.jpeg";
+import iconMedium from "../../assets/icons/medium.png";
+import iconLinkedlin from "../../assets/icons/linkedin.png";
+import iconGithub from "../../assets/icons/github.png";
 
 const PortfolioModel = () => {
   return {
@@ -140,7 +143,34 @@ const PortfolioModel = () => {
           }
         ]
       }
-    }
+    },
+    footer: [
+      {
+        id: 1,
+        name: "AC",
+        img: false,
+        link: "#",
+        brand: true
+      },
+      {
+        id: 2,
+        name: "Linkdlin",
+        img: iconLinkedlin,
+        link: "#"
+      },
+      {
+        id: 3,
+        name: "GitHub",
+        img: iconGithub,
+        link: "#"
+      },
+      {
+        id: 4,
+        name: "Medium",
+        img: iconMedium,
+        link: "#"
+      }
+    ]
   };
 };
 
