@@ -87,31 +87,27 @@ const PortfolioModel = () => {
       timeline: [
         {
           id: 1,
-          dateInitial: 2019,
-          dateEnd: 2020,
-          name: "teste 1",
-          description: "description 1"
+          dateInitial: "Maio de 2019",
+          dateEnd: "Agosto de 2019",
+          name: "Full-Stack Web Developer Intern at RedFox Digital Solutions",
+          description:
+            "Consultoria para grandes empresas - B2B. Atuei com desenvolvimento de soluções digitais para grandes empresas. Utilizei alguns frameworks do Js, como: Vue.js e Node.js."
         },
         {
           id: 2,
-          dateInitial: 2019,
-          dateEnd: 2020,
-          name: "teste 2",
-          description: "description 1"
+          dateInitial: "Agosto de 2019",
+          dateEnd: "Julho de 2020",
+          name: "Front-end Mobile Developer Intern at IBM",
+          description:
+            "Consultoria para grandes empresas. Atuo com desenvolvimento Front-end para Mobile e Web, com os frameworks React e React Native, Ionic, Angular, Spring Boot(Thymeleaf) , etc.."
         },
         {
           id: 3,
-          dateInitial: 2019,
-          dateEnd: 2020,
-          name: "teste 3",
-          description: "description 1"
-        },
-        {
-          id: 4,
-          dateInitial: 2019,
-          dateEnd: 2020,
-          name: "teste 4",
-          description: "description 1"
+          dateInitial: "Junho de 2020",
+          dateEnd: "Até o momento.",
+          name: "Jr. Front-End Developer - IBM",
+          description:
+            "I work in IBM's consulting sector for various branches of companies, and the projects are usually web or mobile."
         }
       ],
       categories: {
@@ -149,26 +145,26 @@ const PortfolioModel = () => {
         id: 1,
         name: "AC",
         img: false,
-        link: "#",
+        link: "/",
         brand: true
       },
       {
         id: 2,
         name: "Linkdlin",
         img: iconLinkedlin,
-        link: "#"
+        link: "https://www.linkedin.com/in/andrew-caldas/"
       },
       {
         id: 3,
         name: "GitHub",
         img: iconGithub,
-        link: "#"
+        link: "https://github.com/AndrewCaldas"
       },
       {
         id: 4,
         name: "Medium",
         img: iconMedium,
-        link: "#"
+        link: "https://medium.com/@andrewcaldas"
       }
     ]
   };

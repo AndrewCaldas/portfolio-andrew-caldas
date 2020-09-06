@@ -10,11 +10,11 @@ const Footer = ({ listIcons }) => {
       <div className="inside">
         {listIcons.length > 0 &&
           listIcons.map((item, index) => (
-            <Col key={index} className="column">
+            <Col key={index} id={"footer-" + item.id} className="column">
               {!item.img ? (
                 <TextBold text={item.name} color="#000" size="big" />
               ) : (
-                <a href={item.link}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
                   <img src={item.img} alt="" />
                 </a>
               )}
