@@ -2,7 +2,16 @@ import React from "react";
 import BigCard from "./BigCard";
 import SmallCard from "./SmallCard";
 
-const Cards = ({ objectId, rowIndex, title, description, date, img, type }) => {
+const Cards = ({
+  objectId,
+  rowIndex,
+  title,
+  description,
+  date,
+  img,
+  type,
+  _onClick
+}) => {
   return (
     <div>
       {type && (
@@ -15,6 +24,7 @@ const Cards = ({ objectId, rowIndex, title, description, date, img, type }) => {
               description={description}
               date={date}
               img={img}
+              _onClick={_onClick}
             />
           ) : type === "small" ? (
             <SmallCard
@@ -22,6 +32,7 @@ const Cards = ({ objectId, rowIndex, title, description, date, img, type }) => {
               title={title}
               description={description}
               img={img}
+              _onClick={_onClick}
             />
           ) : (
             <span></span>

@@ -9,13 +9,16 @@ import Timeline from "../../components/Timeline";
 import PortfolioModel from "./Model";
 import Categories from "../../components/Categories";
 import Footer from "../../components/Footer";
+import { useHistory } from "react-router-dom";
 
-const PageObject = PortfolioModel();
+const PageObject = Object.assign({}, PortfolioModel());
 
 const Portfolio = () => {
+  const history = useHistory();
+
   return (
     <div>
-      <Header />
+      <Header background={false} />
       <SlickSlider
         list={PageObject.slides.images}
         mask={true}
@@ -37,10 +40,13 @@ const Portfolio = () => {
                 rowIndex={index}
                 objectId={item.id}
                 title={item.title}
-                description={item.description}
+                description={item.abstract}
                 date={item.date}
                 img={item.img}
                 type={"big"}
+                _onClick={() => {
+                  history.push(`/project/${item.id}`);
+                }}
               />
             </span>
           ))}
@@ -70,7 +76,7 @@ const Portfolio = () => {
           categories={PageObject.about.categories.listCategories}
         />
 
-        <Footer listIcons={PageObject.footer} />
+        <Footer />
       </div>
     </div>
   );

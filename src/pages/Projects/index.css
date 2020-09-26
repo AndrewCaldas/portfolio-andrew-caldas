@@ -1,0 +1,53 @@
+.projects-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 100px;
+}
+
+.projects-main .section {
+  display: flex;
+  width: 100vw;
+  height: 50vh;
+  /* margin: 0 0 4rem 0; */
+}
+
+.projects-main .section .image-main {
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  -webkit-box-shadow: inset 0px 0px 25px -10px rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px 0px 25px -10px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 25px -10px rgba(0, 0, 0, 1);
+}
+.projects-main .section .image-main img {
+  cursor: zoom-in;
+  position: absolute;
+  left: -10000%;
+  right: -10000%;
+  top: -10000%;
+  bottom: -10000%;
+  margin: auto auto;
+  min-width: 1000%;
+  min-height: 1000%;
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+}
+
+/* TEXT DESCRITION  */
+
+.projects-main .descrition-main {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+/* BUTTON  */
+
+.projects-main .button-project {
+  width: 100%;
+  margin: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

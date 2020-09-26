@@ -10,6 +10,15 @@
   transition-property: background;
 }
 
+.header-main .default-class-background {
+  background: rgba(103, 71, 199, 1);
+  transition-duration: 200ms;
+  transition-property: background;
+  -webkit-box-shadow: 0px 31px 64px -34px rgba(103, 71, 199, 1);
+  -moz-box-shadow: 0px 31px 64px -34px rgba(103, 71, 199, 1);
+  box-shadow: 0px 31px 64px -34px rgba(103, 71, 199, 1);
+}
+
 .header-main .scrolling-class {
   background: rgba(103, 71, 199, 0.85);
   transition-duration: 500ms;

@@ -1,0 +1,21 @@
+.button-border .btn {
+  padding: 0.5rem 40px;
+  background-color: transparent;
+  font-weight: lighter;
+  color: rgba(103, 71, 199, 1);
+  border: none;
+}
+
+.button-border .btn:hover {
+  background-color: rgba(103, 71, 199, 1);
+}
+
+.button-border .btn:focus {
+  background-color: rgba(103, 71, 199, 1) !important;
+  border: 1px solid rgba(103, 71, 199, 1) !important;
+  box-shadow: none !important;
+}
+
+.button-border .btn-primary {
+  border: 1px solid rgba(103, 71, 199, 1);
+}

@@ -32,12 +32,13 @@ const Drawings = ({
   twoSide,
   background,
   text,
-  textLegal
+  textLegal,
+  withHeader
 }) => {
   let varColor = background ? "#6747c7" : "transparent";
 
   return (
-    <div className={"drawings-main"}>
+    <div className={"drawings-main" + (withHeader ? " extend-header" : "")}>
       <span
         className={background ? "bord" : ""}
         style={{ background: varColor }}

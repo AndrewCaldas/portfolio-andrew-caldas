@@ -22,7 +22,15 @@ const detectAddOrEven = num => {
   if (n % 2 === 1) return 1;
 };
 
-const BigCard = ({ objectId, rowIndex, title, description, date, img }) => {
+const BigCard = ({
+  objectId,
+  rowIndex,
+  title,
+  description,
+  date,
+  img,
+  _onClick
+}) => {
   const [height, setHeight] = useState(0);
   const [width, setWidth] = useState(0);
 
@@ -40,6 +48,7 @@ const BigCard = ({ objectId, rowIndex, title, description, date, img }) => {
     <div
       id={objectId ? "big-card-" + objectId : null}
       className="big-cards-main"
+      onClick={_onClick}
     >
       <Container>
         <div
@@ -66,7 +75,12 @@ const BigCard = ({ objectId, rowIndex, title, description, date, img }) => {
           className="rigth-side"
           style={detectAddOrEven(rowIndex) === 0 ? { order: 2 } : { order: 1 }}
         >
-          <img src={typeImage(img, height, width)} width="auto" height="auto" />
+          <img
+            src={typeImage(img, height, width)}
+            width="auto"
+            height="auto"
+            alt=""
+          />
         </div>
       </Container>
     </div>

@@ -40,7 +40,11 @@ const SlickSlider = ({ title, description, list, state, mask }) => {
         {list &&
           list.map((item, index) => (
             <div key={index} className="box-img">
-              <img id={item.id} src={item.img ? item.img : PlaceHolder} />
+              <img
+                id={item.id}
+                src={item.img ? item.img : PlaceHolder}
+                alt=""
+              />
             </div>
           ))}
       </Slider>

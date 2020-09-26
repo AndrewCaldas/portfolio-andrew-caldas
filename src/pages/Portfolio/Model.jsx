@@ -41,6 +41,8 @@ const PortfolioModel = () => {
         {
           id: 1,
           title: "Projeto 1",
+          abstract:
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           description:
             "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           date: "23/03/2012",
@@ -49,6 +51,8 @@ const PortfolioModel = () => {
         {
           id: 2,
           title: "Projeto 2",
+          abstract:
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           description:
             "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           date: "23/03/2012",
@@ -57,6 +61,8 @@ const PortfolioModel = () => {
         {
           id: 3,
           title: "Projeto 3",
+          abstract:
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           description:
             "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           date: "23/03/2012",
@@ -65,6 +71,8 @@ const PortfolioModel = () => {
         {
           id: 4,
           title: "Projeto 4",
+          abstract:
+            "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           description:
             "Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo ut.",
           date: "23/03/2012",
@@ -139,34 +147,7 @@ const PortfolioModel = () => {
           }
         ]
       }
-    },
-    footer: [
-      {
-        id: 1,
-        name: "AC",
-        img: false,
-        link: "/",
-        brand: true
-      },
-      {
-        id: 2,
-        name: "Linkdlin",
-        img: iconLinkedlin,
-        link: "https://www.linkedin.com/in/andrew-caldas/"
-      },
-      {
-        id: 3,
-        name: "GitHub",
-        img: iconGithub,
-        link: "https://github.com/AndrewCaldas"
-      },
-      {
-        id: 4,
-        name: "Medium",
-        img: iconMedium,
-        link: "https://medium.com/@andrewcaldas"
-      }
-    ]
+    }
   };
 };
 

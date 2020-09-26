@@ -22,3 +22,11 @@ body {
   font-weight: 400;
   src: url("../assets/fonts/work-sans-light.ttf"); /* IE9 Compat Modes */
 }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: "WorkSans-Light";
+}
