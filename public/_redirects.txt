@@ -1,5 +1,5 @@
 # Redirects from what the browser requests to what we serve
 /                  /portfolio
 /portfolio         /portfolio
-/sobre             /sobre
-/contato           /contato
+/about             /about
+/contact           /contact
