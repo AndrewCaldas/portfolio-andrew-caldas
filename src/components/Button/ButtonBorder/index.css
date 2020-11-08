@@ -8,6 +8,7 @@
 
 .button-border .btn:hover {
   background-color: rgba(103, 71, 199, 1);
+  color: white
 }
 
 .button-border .btn:focus {
