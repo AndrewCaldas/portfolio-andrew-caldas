@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../../components/Header";
 import Drawings from "../../components/Drawings";
 import Cards from "../../components/Cards";
@@ -10,15 +10,32 @@ import PortfolioModel from "./Model";
 import Categories from "../../components/Categories";
 import Footer from "../../components/Footer";
 import { useHistory } from "react-router-dom";
+import i18n from "../../locales";
 
 const PageObject = Object.assign({}, PortfolioModel());
 
 const Portfolio = () => {
   const history = useHistory();
 
+  const sessionAbout = useRef(null)
+
+  let NavLinks = [
+    {
+      id: 1,
+      name: i18n.t("header.links.portfolio"),
+      href: "/portfolio",
+    },
+    {
+      id: 2,
+      name: i18n.t("header.links.about"),
+      ref: sessionAbout
+    },
+    { id: 3, name: i18n.t("header.links.contact"), href: "/contact" }
+  ];
+
   return (
     <div>
-      <Header background={false} />
+      <Header background={false} navLinks={NavLinks} />
       <SlickSlider
         list={PageObject.slides.images}
         mask={true}
@@ -30,7 +47,7 @@ const Portfolio = () => {
         <Drawings
           text={PageObject.portfolio.title}
           background={false}
-          // textLegal={i18n.t("portfolio.text_legal")}
+        // textLegal={i18n.t("portfolio.text_legal")}
         />
 
         {PageObject.portfolio.projects &&
@@ -52,7 +69,7 @@ const Portfolio = () => {
           ))}
       </div>
 
-      <div id="session-about">
+      <div id="session-about" ref={sessionAbout}>
         <Drawings
           title={PageObject.about.title}
           description={PageObject.about.description}
@@ -81,36 +98,5 @@ const Portfolio = () => {
     </div>
   );
 };
-
-// let listCategories = {
-//   id: 1,
-//   title: "Hobbies",
-//   listCategories: [
-//     {
-//       id: 1,
-//       name: "teste 1",
-//       description:
-//         "Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă",
-//       img: "",
-//       link: ""
-//     },
-//     {
-//       id: 2,
-//       name: "teste 2",
-//       description:
-//         "Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă",
-//       img: "",
-//       link: ""
-//     },
-//     {
-//       id: 3,
-//       name: "teste 3",
-//       description:
-//         "Lorem Ipsum este pur şi simplu o machetă pentru text a industriei tipografice. Lorem Ipsum a fost macheta standard a industriei încă din secolul al XVI-lea, când un tipograf anonim a luat o planşetă de litere şi le-a amestecat pentru a crea o carte demonstrativă",
-//       img: "",
-//       link: ""
-//     }
-//   ]
-// };
 
 export default Portfolio;

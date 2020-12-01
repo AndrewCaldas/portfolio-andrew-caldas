@@ -1,0 +1,22 @@
+
+.page-contact-main .section-contact {
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-contact-main .drawings-main {
+  min-height: 50vh;
+  margin: 0 !important;
+}
+
+.page-contact-main .drawings-main .bord {
+  border-radius: 0 0 0 5%;
+  height: 50vh;
+}
+
+.page-contact-main .drawings-main .drawings {
+  border-radius: 0 0 0 35%;
+}

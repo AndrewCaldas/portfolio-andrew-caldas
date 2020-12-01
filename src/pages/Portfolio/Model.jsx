@@ -8,6 +8,10 @@ import imgProfile from "../../assets/img/img-profile.jpeg";
 import iconMedium from "../../assets/icons/medium.png";
 import iconLinkedlin from "../../assets/icons/linkedin.png";
 import iconGithub from "../../assets/icons/github.png";
+import IconGames from "../../assets/icons/console.svg";
+import IconBook from "../../assets/icons/book.svg";
+import IconProfits from "../../assets/icons/profits.svg";
+
 
 const PortfolioModel = () => {
   return {
@@ -88,7 +92,7 @@ const PortfolioModel = () => {
       owner: {
         id: 1,
         text:
-          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "Bom, tentarei ser breve. Meu nome é Andrew, nasci e vivi a minha vida toda em São Paulo, Capital. Na minha infância tive minha primeira experiência com um computador, o bom e velho Windows XP e o monitor de tubo. Na Adolescência já estava engajado no mundo web e já oferecia serviços de web design de graça para lojas, pequenos comércios, etc. Na minha fase adulta eu conheci a programação, confesso que não foi amor pela primeira vista, mas ela me encantava muito e então tomei coragem e me inscrevi no vestibular do Centro Paula Souza para prestar Análise e Desenvolvimento de Sistema na Fatec Zona Leste. Pois bem, passei, foi uma alegria em casa e para mim, mal podia esperar pelo conhecimento que eu poderia adquirir dentro daquela instituição, e bem, foi bastante conhecimento, até que entre o 4 e 5 semestres eu fui em busca dos estágios, demorou, mas uma Startup me ofereceu a oportunidade e eu agarrei com força, e foi ali que eu me apaixonei pela carreira de Front-End e não parei mais. :)",
         img: imgProfile
       },
       title_timeline: "Experiências",
@@ -126,23 +130,23 @@ const PortfolioModel = () => {
             id: 1,
             name: "Leitura",
             description:
-              "Leitura se tornou um hábito saudavel entre minha rotina diaria.",
-            img: Img1,
+              "A Leitura não era algo muito agradavél para mim a 2 anos atrás, porém eu me forçei a pelo menos ler alguns livros durante o ano, até que eu me encantei por todo aquele mundo dentro dos livros e não parei mais.",
+            img: IconBook,
             link: ""
           },
           {
             id: 2,
             name: "Jogos",
-            description: "Quando é para se desligar de tudo, eu amo jogar.",
-            img: Img1,
+            description: "Quando é para eu me desligar de tudo e de todos, o meu lazer é jogar, não importa o tipo de jogo.",
+            img: IconGames,
             link: ""
           },
           {
             id: 3,
             name: "Investimentos",
             description:
-              "Também penso no meu futuro, e acredito que bons investimentos podem moldar a minha qualidade de vida daqui para frente.",
-            img: Img1,
+              "Também penso no meu futuro, e acredito que bons investimentos podem moldar a minha qualidade de vida daqui para frente. Se um dia você me encontrar na hora do almoço, você provavelmente notará que terá alguns gráficos na minha tela do computador hahaha.",
+            img: IconProfits,
             link: ""
           }
         ]

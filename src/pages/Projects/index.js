@@ -11,9 +11,10 @@ import ButtonBorder from "../../components/Button/ButtonBorder";
 
 import "./index.css";
 
-const Projects = props => {
+const Projects = () => {
   let { id } = useParams();
-  // const history = useHistory();
+
+  const history = useHistory();
 
   const [object, setObject] = useState({});
 
@@ -22,6 +23,10 @@ const Projects = props => {
     if (!id || !setObject) return;
     findByIdProvision(id, setObject);
   }, [id, setObject]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <div id={object ? object.id : null}>
@@ -32,7 +37,6 @@ const Projects = props => {
             title={object ? object.title : ""}
             description={object ? object.abstract : ""}
             background={false}
-            // withHeader={true}
           />
 
           <div className="section">
@@ -53,10 +57,7 @@ const Projects = props => {
             <div className="button-project">
               <ButtonBorder
                 text="Ir para o Site"
-                _onClick={() => {
-                  // history.push("/");
-                  alert("foi");
-                }}
+                _onClick={() => history.push("#")}
               />
             </div>
           </Container>
