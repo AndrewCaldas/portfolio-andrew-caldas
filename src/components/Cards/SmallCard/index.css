@@ -15,8 +15,9 @@
 }
 
 .small-card-main img {
-  width: 80%;
+  width: 50%;
   margin: 10px 0 0 0;
+  filter: brightness(0) invert(1);
 }
 
 .small-card-main .text {
