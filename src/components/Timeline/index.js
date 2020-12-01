@@ -19,6 +19,7 @@ const Timeline = ({ title, timeline }) => {
         <VerticalTimeline>
           {timeline.map((item, index) => (
             <VerticalTimelineElement
+              key={index}
               className="vertical-timeline-element--work"
               contentStyle={{
                 background: "rgba(103, 71, 199, 1)",
@@ -35,7 +36,7 @@ const Timeline = ({ title, timeline }) => {
                 />
               }
               iconStyle={{ background: "rgba(103, 71, 199, 1)", color: "#000" }}
-              // icon={<WorkIcon />}
+            // icon={<WorkIcon />}
             >
               <TextBold text={item.name} color={"#FFF"} size="medium" />
               <div>

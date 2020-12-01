@@ -4,29 +4,10 @@ import Text from "../Text";
 import TextBold from "../Text/TextBold";
 import TextLight from "../Text/TextLight";
 import i18n from "../../locales";
-// import { useHistory } from "react-router-dom";
 import "./index.css";
 
-// let auxPositionElement = null;
-
-let NavLinks = [
-  {
-    id: 1,
-    name: i18n.t("header.links.portfolio"),
-    href: "/portfolio",
-    component: "session-portfolio"
-  },
-  {
-    id: 2,
-    name: i18n.t("header.links.about"),
-    href: "/about"
-    // component: "session-about"
-  },
-  { id: 3, name: i18n.t("header.links.contact"), href: "/contact" }
-];
-
 const detectScrolling = (setClassScrolling, param, background) => {
-  window.onscroll = function() {
+  window.onscroll = function () {
     if (window.pageYOffset > param) {
       setClassScrolling("scrolling-class");
     } else {
@@ -39,22 +20,24 @@ const detectScrolling = (setClassScrolling, param, background) => {
   };
 };
 
-// const autoScrolling = component => {
-//   if (!component) return;
-//   let e = document.getElementById(component);
-//   if (e !== null) {
-//     let getYPosition = e.getBoundingClientRect().top - 100;
-//     // let teste = e.ScrollTop;
-//     // debugger;
-//     if (getYPosition > 0) {
-//       document.documentElement.scrollTo(0, getYPosition);
-//     } else {
-//       document.location.href = "#" + component;
-//     }
-//   }
-// };
+const scrollToBottom = (ref) => {
+  if (!ref.current) return
+  ref.current.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 
-const Header = ({ title, state, background }) => {
+let NavLinks = [
+  {
+    id: 1,
+    name: i18n.t("header.links.portfolio"),
+    href: "/portfolio",
+  },
+  { id: 3, name: i18n.t("header.links.contact"), href: "/contact" }
+];
+
+const Header = ({ title, state, background, navLinks }) => {
   let word_first = title ? title.split(" ")[0] : "Andrew";
   let word_second = title ? title.split(" ")[1] : "Caldas";
 
@@ -65,11 +48,16 @@ const Header = ({ title, state, background }) => {
     background ? "default-class-background" : ""
   );
 
-  // const history = useHistory();
+  const [navlinksState, setNavlinksState] = useState(NavLinks)
 
   useEffect(() => {
-    // detectScrolling(setScrolling, 425);
+    if (!navLinks || navLinks.length === 0) return
+    setNavlinksState(navLinks)
+  }, [navLinks])
+
+  useEffect(() => {
     detectScrolling(setClassScrolling, 1, background);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -95,14 +83,14 @@ const Header = ({ title, state, background }) => {
             </NavbarBrand>
           </Col>
           <Col className="header-links">
-            {NavLinks && (
+            {navlinksState && navlinksState.length > 0 && (
               <Nav className="links">
-                {NavLinks.map((items, index) => (
+                {navlinksState.map((items, index) => (
                   <NavLink
                     key={index}
-                    id={"nav-" + items.id}
+                    id={`nav-${items.id}`}
                     href={items.href}
-                    // onClick={() => autoScrolling(items.component)}
+                    onClick={() => items.ref && scrollToBottom(items.ref)}
                   >
                     <Text text={items.name} color={colortext} />
                   </NavLink>
@@ -111,7 +99,7 @@ const Header = ({ title, state, background }) => {
             )}
           </Col>
           <Col className="locale">
-            <Text text={"PT/EN"} color={colortext} />
+            {/* <Text text={"PT/EN"} color={colortext} /> */}
           </Col>
         </Navbar>
       </div>

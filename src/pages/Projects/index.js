@@ -32,7 +32,7 @@ const Projects = props => {
             title={object ? object.title : ""}
             description={object ? object.abstract : ""}
             background={false}
-            // withHeader={true}
+          // withHeader={true}
           />
 
           <div className="section">

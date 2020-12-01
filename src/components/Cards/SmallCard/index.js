@@ -7,7 +7,7 @@ const SmallCard = ({ objectId, title, description, img, _onClick }) => {
   return (
     <div
       className="small-card-main"
-      objectId={"small-card-" + objectId}
+      objectId={"small-card-" + objectId ? objectId : ""}
       onClick={_onClick}
     >
       <img src={img} alt="img-card" />

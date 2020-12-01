@@ -35,8 +35,8 @@ const Cards = ({
               _onClick={_onClick}
             />
           ) : (
-            <span></span>
-          )}
+                <span></span>
+              )}
         </span>
       )}
     </div>
