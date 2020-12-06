@@ -16,9 +16,9 @@
   top: -10000%;
   bottom: -10000%;
   margin: auto auto;
-  min-width: 1000%;
-  min-height: 1000%;
-  transform: scale(0.1);
+  /* min-width: 1000%;
+  min-height: 1000%; */
+  transform: scale(0.2);
 }
 
 @media only screen and (max-width: 1100px) {
@@ -28,13 +28,12 @@
 
   .owner-main img {
     /* margin-top: 10px; */
-    transform: scale(0.03);
+    transform: scale(0.1);
   }
 }
 
-@media only screen and (max-width: 500px) {
+/* @media only screen and (max-width: 500px) {
   .owner-main img {
-    /* margin-top: 10px; */
-    transform: scale(0.05);
-  }
-}
+    transform: scale(0.1);
+  } */
+/* } */

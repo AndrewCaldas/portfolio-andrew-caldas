@@ -48,3 +48,31 @@
 .text-uppercase {
   text-transform: uppercase !important;
 }
+
+/* MEDIA STYLE  */
+
+@media only screen and (max-width: 500px) {
+  .main-text {
+    font-size: 16px;
+  }
+  
+  .main-text.extra-big {
+    font-size: 40px !important;
+  }
+  
+  .main-text.big {
+    font-size: 32px !important;
+  }
+  
+  .main-text.medium {
+    font-size: 20px !important;
+  }
+  
+  .main-text.small {
+    font-size: 12px !important;
+  }
+  
+  .main-text.extra-small {
+    font-size: 8px !important;
+  }
+}

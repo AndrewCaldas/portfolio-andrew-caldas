@@ -1,3 +1,6 @@
+/* .page-contact-main .row-line {
+
+} */
 
 .page-contact-main .section-contact {
   display: flex;
@@ -8,15 +11,18 @@
 }
 
 .page-contact-main .drawings-main {
-  min-height: 50vh;
+  /* min-height: 50vh; */
   margin: 0 !important;
 }
 
 .page-contact-main .drawings-main .bord {
-  border-radius: 0 0 0 5%;
-  height: 50vh;
+  display: none;
+  /* border-radius: 0 0 0 5%;
+  height: 45.2vh; */
+  /* height: 50vh; */
 }
 
 .page-contact-main .drawings-main .drawings {
-  border-radius: 0 0 0 35%;
+  /* border-radius: 0 0 0 35%; */
+  border-radius: 0 0 0 15%;
 }
