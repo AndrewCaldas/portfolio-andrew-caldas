@@ -1,6 +1,6 @@
-/* .page-contact-main .row-line {
-
-} */
+.page-contact-main .row-line {
+  height: 100vh;
+}
 
 .page-contact-main .section-contact {
   display: flex;
