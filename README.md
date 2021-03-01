@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# About it: 
+Portfolio project created in React DOM (js) to show all my personal projects, beta environment: https://andrewcaldas.netlify.app/
 
 # Ambiente/Environment
 https://andrewcaldas.netlify.app/portfolio
